@@ -1,0 +1,64 @@
+#include<stdio.h>
+void nhap(int arr[][4],int n,int m){
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			printf("Nhap vao phan tu arr[%d][%d]", n, m);
+			scanf("%d", &arr[n][m]); 
+		} 
+		printf("\n"); 
+	} 	
+} 
+void xuat(int arr[][4],int n,int m){
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+		printf("%d\t", arr[n][m]); 
+		} 
+		printf("\n"); 
+	} 
+} 
+void maxduongcheo(int arr[][4],int n,int m){
+	int max=arr[0][0]; 
+	for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (i == j && max < arr[i][j]) {
+                max = arr[i][j];
+            }
+	printf("%d", max); 
+	
+}
+void xacdinhphantu(int arr[][4],int n,int m){
+	int min=arr[0][0]; 
+	for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (i == j && min > A[i][j]) {
+                min = A[i][j];
+            }}
+	print("%d", j); }	
+}
+void sapxep(int arr[][4],int n,int m){
+	int j=*j; 
+	for(int i=0;i<n;i++){
+		for(int f=i+1;f<n; f++){
+			if(arr[i][j]>arr[f][j]){
+				int x=arr[i][j];
+				arr[i][j]=arr[f][j];
+				arr[f][j]=x; 
+			} 
+		} 
+	} 
+}
+
+int main(){
+	int n,m;
+	printf("Nhap vao 2 so nguyen n va m:");
+	scanf("%d", &n);
+	scanf("%d", &m); 
+	int arr[n][m]; 
+	nhap(arr,n,m);
+	xacdinhphantu(arr,n,m); 
+	printf("Cac phan tu sau khi sap xep la:") ;
+	sapxep(int arr,n,m); 
+	xuat(arr,n,m); 
+	
+	
+} 
